@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&display=swap');
+
+*{
+        margin: 0;
+        padding: 0;   
+        box-sizing: border-box;
+        border: none;
+        text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+p, div{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+:root{
+    --bg-color:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#ffffff;
+    --main-color:#0ef;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+header.sticky{
+    border-bottom: .1rem solid  rgba(0, 0, 0, -2);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.logo img{
+    cursor: pointer;
+    width: 7rem;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+.log img:hover{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+header .navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 0 .3s;
+}
+header .navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+header #menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+main .theme{
+    position: fixed;
+    left: 3rem;
+    top: 36rem;
+    transform: translateY(-50%);
+    background: cadetblue;
+    border-radius: 20px;
+    box-shadow:  .2rem .2rem .3rem var(--main-color);
+    padding: 5px 0px;
+    z-index: 1;
+    
+}
+main .theme i{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 1.3rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+main .theme i:nth-child(1){
+    color: #1f242d;
+}
+main .theme i:nth-child(2){
+    color: red;
+}
+main .theme i:nth-child(3){
+    color:white;
+}
+.accueil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.accueil-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.accueil-content h3:nth-child(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.accueil-content img{
+    width: 25vw;
+}
+.accueil-content p{
+    font-size: 1.6rem;
+}
+
+.bouton{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+.bouton:hover{
+    box-shadow: none;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color); 
+    border-radius: 50%;
+    font-size: 2rem;
+    color : var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.maison i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid #77ee77;
+    border-radius: 50%;
+    font-size: 2rem;
+    color :  #77ee77;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+.apropos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.apropos-img img{
+    width: 35vw;
+}
+
+.entete{
+    text-align: center;
+    font-size: 4rem;
+}
+.apropos-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.apropos-content h3{
+    font-size: 2.6rem;
+}
+
+.apropos-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.services h2{
+    margin-bottom: 5rem;
+}
+.services-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services-content .services-box{
+    flex:  1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color); 
+    transform: .5s ease;
+}
+
+.services-content .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.05);
+}
+.services-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.services-box h3{
+    font-size: 2.6rem;
+}
+
+.services-box p{
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+
+.profil{
+    background: var(--second-bg-color);
+}
+
+.profil h2{
+    margin-bottom: 4rem;
+
+}
+.profil-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.profil-content .profil-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.profil-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+.profil-box:hover img{
+    transform: scale(1.2);
+}
+.profil-box .profil-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.profil-box:hover .profil-layer{
+    transform: translateY(0);
+}
+.profil-layer h4{
+    font-size: 3rem;
+}
+.profil-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+.profil-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+
+}
+
+.profil-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .contact-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .contact-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 0.8rem;
+    margin: .7rem 0;
+}
+
+.contact form .contact-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+} 
+
+.contact form .bouton{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icon a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icon a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+/************************************/
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.dropdown .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--main-color);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--second-bg-color);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ section .maison{
+     margin: 1rem;
+     padding: 1rem;
+ }
+ section table{
+     margin: 0rem;
+     padding: 0rem;
+     color: var(--text-color);
+     display: table;
+     align-content: center;
+     align-items: center;
+     justify-content: center;
+ }
+section th, td{
+    border: 1px solid;
+    padding: 1rem;
+    justify-content: center;
+
+
+}
+
+section table td a{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+section table td a:hover{
+    color: red;
+}
+section h1{
+    color: var(--main-color);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+section .col a, #editBack{
+    display: block;
+    width: 7rem;
+    line-height: 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+section .col a:hover, #editBack:hover{
+    background:var(--main-color) no-repeat
+}
+.newUser div, .editform div, .ajoutMaison div{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+.newUser form , .editform form, .ajoutMaison form{
+    max-width: 100rem;
+    margin: 1rem auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.newUser #utilisateur, .inscription #utilisateur, .ajoutMaison #utilisateur {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.newUser , .inscription div label, .editform div label, .ajoutMaison div label{
+    padding: 2rem;
+}
+.newUser div input, .editform div input, .inscription div input, .ajoutMaison div input, select{
+    width: 48%;
+    padding: 1.3rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 0.8rem;
+    margin: 0.8rem 0;
+    width: -moz-available;
+}
+
+section .row form button{
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
